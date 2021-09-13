@@ -5,5 +5,17 @@
   <%= @route.name %>
 </p>
 
+<p>
+  <% if @route.railway_stations.empty? %>
+    The list is empty
+  <% else %>
+    <ul>
+      <% @route.railway_stations.each do |rs| %>
+        <li><%= rs.title %></li>
+      <% end %>  
+    </ul>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_route_path %>
 <%= link_to 'Back', routes_path %>
