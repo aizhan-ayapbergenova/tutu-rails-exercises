@@ -28,6 +28,32 @@
         <% end %>  
       </ul>
     <% end %>
+  <% if @route.railway_stations.empty? %>
+    The list is empty
+  <% else %>
+    <table>
+      <thead>
+        <tr>
+          <td width="100px">Name</td>
+          <td>Position</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @route.railway_stations.ordered.each do |rs| %>
+          <tr>
+            <td><%= rs.title %></td>
+            <td>
+              <%= form_tag update_position_railway_station_path(rs), method: :patch do %>
+                <%= number_field_tag :position, rs.position_in(@route) %>
+                <%= hidden_field_tag :route_id, @route.id %>
+                <%= submit_tag "Update" %>
+              <% end %>  
+            </td>
+          </tr>  
+        <% end %> 
+      </tbody>
+    </table>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_route_path %>
