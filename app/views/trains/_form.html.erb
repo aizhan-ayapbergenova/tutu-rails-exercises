@@ -11,6 +11,11 @@
     <%= form.collection_select :current_station_id, RailwayStation.all, :id, :title, prompt: true, selected: @train.current_station %>
   </div>
 
+    <div class="field">
+    <%= form.label :route, "Route" %>
+    <%= form.collection_select :route_id, Route.all, :id, :name, prompt: true, selected: @train.route %>
+  </div>
+
   <div class="actions">
     <%= form.submit "#{@train.new_record? ? 'Create' : 'Edit' }" %>
   </div>

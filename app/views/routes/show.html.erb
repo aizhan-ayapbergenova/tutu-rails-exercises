@@ -6,15 +6,28 @@
 </p>
 
 <p>
-  <% if @route.railway_stations.empty? %>
-    The list is empty
-  <% else %>
-    <ul>
-      <% @route.railway_stations.each do |rs| %>
-        <li><%= rs.title %></li>
-      <% end %>  
-    </ul>
-  <% end %>
+  <strong>Railway stations on this route:</strong>
+    <% if @route.railway_stations.empty? %><br>
+      The railway station list is empty
+    <% else %>
+      <ul>
+        <% @route.railway_stations.each do |rs| %>
+          <li><%= rs.title %></li>
+        <% end %>  
+      </ul>
+    <% end %>
+</p>
+<p>
+  <strong>Trains that follow this route:</strong>
+    <% if @route.trains.empty? %><br>
+      The train list is empty
+    <% else %>
+      <ul>
+        <% @route.trains.each do |t| %>
+          <li><%= t.number %></li>
+        <% end %>  
+      </ul>
+    <% end %>
 </p>
 
 <%= link_to 'Edit', edit_route_path %>
