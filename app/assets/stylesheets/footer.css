@@ -1,8 +1,9 @@
 #footer {
-  position: absolute;
+  position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f5f5f5;
+  font-size: xx-small;
+  background-color: #ffffff;
   padding: 2em;
 }
