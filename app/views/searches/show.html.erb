@@ -1,0 +1,23 @@
+<div class="page-header">
+    <h1>Search for tickets</h1>
+</div>
+
+<div class="form-group">
+    <%= form_tag search_path, method: :post, class: 'search-form' do %>
+        <p>
+            <%= label_tag :first_station_id, t('.search_first_station') %>
+            <%= collection_select :stations, :first_station_id, RailwayStation.all, :id, :title, {}, class: 'form-control' %>
+        </p>
+        <p>
+            <%= label_tag :last_station_id, t('.search_last_station') %>
+            <%= collection_select :stations, :last_station_id, RailwayStation.all, :id, :title, {}, class: 'form-control' %>
+        </p>
+        <p><%= submit_tag 'search'  %></p>
+    <% end %>
+</div>
+
+<% if @routes.present? %>
+    <%= render 'results' %>
+<% end %>
+
+<p><%= link_to 'Back', root_path, class: 'btn btn-primary btn-xs' %></p>

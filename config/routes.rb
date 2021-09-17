@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :carriages
   end
   resources :routes
+
+  resource :search, only: [ :new, :show, :edit]
   
   get 'welcome/index'
 
