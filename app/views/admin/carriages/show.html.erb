@@ -1,23 +1,23 @@
-<h1>Carriage №<%= @carriage.number %></h1>
+<h1><%= t('.title')%> №<%= @carriage.number %></h1>
 
 <p>
-  Train: <%= @carriage.train.number %>
+  <%= t('.train')%>: <%= @carriage.train.number %>
 </p>
 
 <p>
-  Top seats: <%= @carriage.top_seats %>
+  <%= t('.top_seats')%>: <%= @carriage.top_seats %>
 </p>
 
 <p>
-  Bottom seats: <%= @carriage.bottom_seats %>
+  <%= t('.bottom_seats')%>: <%= @carriage.bottom_seats %>
 </p>
 
 <p>
-  Side top seats: <%= @carriage.side_top_seats %>
+  <%= t('.side_top_seats')%>: <%= @carriage.side_top_seats %>
 </p>
 
 <p>
-  Side bottom seats: <%= @carriage.side_bottom_seats %>
+  <%= t('.side_bottom_seats')%>: <%= @carriage.side_bottom_seats %>
 </p>
 
-<%= link_to "Back", @carriage.train %>
+<%= link_to t('common.back'), [:admin, @carriage.train] %>

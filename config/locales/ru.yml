@@ -1,0 +1,59 @@
+ru:
+  common:
+    back: 'Назад'
+    sure: 'Вы уверены?'
+    show: 'Показать'
+    edit: 'Изменить'
+    delete: 'Удалить'
+    errors: 'При заполнении формы возникли ошибки'
+  layouts:
+    application:
+      log_out: 'Выйти'  
+      login: 'Войти'
+      account: 'Аккаунт'
+  admin:
+    railway_stations:
+      new:
+        title: 'Новая станция'
+      form:
+        submit: '%{action} станцию'  
+      edit: 
+        title: 'Редактировать станцию'
+      show:
+        title: 'Название'
+        info: 'Эта станция включена в следующие маршруты'
+        no_info: 'Эта станция не входит ни в один маршрут'
+      index:
+        station: 'Железнодорожные станции'
+        titles: 'Название'
+        title: 'Новая станция'
+    trains:
+      index: 
+        title: 'Поезда'
+        number: 'Номер'
+        new: 'Новый поезд' 
+      show:
+        number: 'Номер'
+        station: 'На станции'
+        route: 'На маршруте'
+        carriages: 'Вагоны'
+        carriage: 'Вагон'
+        add_carriage: 'Добавить вагон'
+      form:
+        current_station: 'Текущая станция' 
+        route: 'Маршрут'
+      edit:
+        title: 'Изменить поезд'
+      new:
+        title: 'Новый поезд'  
+    carriages:
+      new:
+        title: 'Вагон'
+      show:
+        title: 'Вагон' 
+        train: 'Поезд'
+        top_seats: 'Верхние места' 
+        bottom_seats: 'Нижние места'
+        side_top_seats: 'Боковые верхние места'
+        side_bottom_seats: 'Боковые нижние места'
+ 

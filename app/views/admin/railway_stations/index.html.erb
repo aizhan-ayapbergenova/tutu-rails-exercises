@@ -1,10 +1,10 @@
 
-<h1>Railway Stations</h1>
+<h1><%= t('.station')%></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th><%= t('.titles')%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,5 +16,5 @@
 
 <br>
 
-<%= link_to 'New Railway Station', new_admin_railway_station_path %><br>
-<%= render 'common/back_button' %>
+<%= link_to t('.title'), new_admin_railway_station_path %><br>
+<%= link_to t('common.back'), root_path %>
