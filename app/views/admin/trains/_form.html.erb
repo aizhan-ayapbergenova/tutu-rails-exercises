@@ -7,16 +7,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :current_station, "Current Station" %>
+    <%= form.label :current_station, t('.current_station') %>
     <%= form.collection_select :current_station_id, RailwayStation.all, :id, :title, prompt: true, selected: @train.current_station %>
   </div>
 
     <div class="field">
-    <%= form.label :route, "Route" %>
+    <%= form.label :route, t('.route') %>
     <%= form.collection_select :route_id, Route.all, :id, :name, prompt: true, selected: @train.route %>
   </div>
 
   <div class="actions">
-    <%= form.submit "#{@train.new_record? ? 'Create' : 'Edit' }" %>
+    <%= form.submit "#{@train.new_record? ? 'Cоздать' : 'Изменить' }" %>
   </div>
 <% end %>
