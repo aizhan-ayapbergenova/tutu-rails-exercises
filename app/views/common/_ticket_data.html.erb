@@ -1,0 +1,23 @@
+<p>
+    <h4><small>Route: </small><%= "#{ticket.depart_station.title} - #{ticket.arrive_station.title}" %></h4>
+</p>
+
+<p>
+    <h4><small>Departure time: </small><%= @depart_station_time %></h4>
+</p>
+
+<p>
+    <h4><small>Arrival time: </small><%= @arrive_station_time %></h4>
+</p>
+
+<p>
+    <h4><small>Train number: </small><%= ticket.train.number %></h4>
+</p>
+
+<p>
+    <h4><small>Passenger: </small><%= "#{ticket.last_name} #{ticket.first_name} #{ticket.middle_name}" %></h4>
+</p>
+
+<p>
+    <h4><small>Passport number: </small><%= ticket.passport_number %></h4>
+</p>

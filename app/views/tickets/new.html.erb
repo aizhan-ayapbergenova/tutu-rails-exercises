@@ -1,0 +1,15 @@
+<h1>Ticket purchase</h1>
+
+<% if user_signed_in? %>
+  <%= form_for @ticket do |form| %>
+      <%= form.hidden_field :train_id, { value: params[:train_id] } %>
+      <%= form.hidden_field :depart_station_id, { value: params[:depart_station_id] } %>
+      <%= form.hidden_field :arrive_station_id, { value: params[:arrive_station_id] } %>
+      <%= render 'common/user_data', form: form %>
+    <%= form.submit 'Buy ticket', class: "btn btn-default" %>
+  <% end %>
+<% else %>
+  <p>To purchase a ticket the below is required <%= link_to 'register', new_user_registration_path %></p>
+<% end %>
+
+<p><%= link_to 'Back to search', search_path %></p>
