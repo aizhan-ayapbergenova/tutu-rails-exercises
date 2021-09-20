@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>Tickets</h1>
+</div>
+
+<% if current_user.tickets.any? %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td><b>Route</b></td>
+        <td><b>Passenger's full name</b></td>
+        <td><b>Actions</b></td>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% current_user.tickets.each do |ticket| %>
+      <tr>
+          <td><%= "#{ticket.depart_station.title} - #{ticket.arrive_station.title}" %></td>
+          <td><%= "#{ticket.last_name} #{ticket.first_name} #{ticket.middle_name}" %>
+          <td><%= link_to 'Show', ticket_path(ticket) %></td>
+          <td><%= link_to 'Delete', ticket_path(ticket), method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h4>No tickets</h4>
+<% end %>
+
+<p><%= link_to 'Back', root_path %></p>

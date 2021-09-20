@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  resources :tickets, only: [:create, :show]
+  resources :tickets
 
   resource :search, only: [ :new, :show, :edit]
 
